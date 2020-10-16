@@ -1,0 +1,109 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+#calculator{
+  position: relative;
+  height: 80vh;
+  width: 50vh;
+  top: 10vh;
+  margin: 0 auto;
+  display: grid;
+  grid-template: "display" 5fr
+                 "buttons" 15fr / 1fr;
+  border: solid 1px black;
+}
+#display{
+  grid-area: display;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: 10px;
+  font-size: 7vh;
+  background-color: lightblue;
+}
+#button-container{
+  grid-area: buttons;
+  display: grid;
+  grid-template: repeat(5,1fr) / repeat(4,1fr);
+  grid-template-areas: "reset backspace divide multiply"
+                       "d7 d8 d9 subtract"
+                       "d4 d5 d6 add"
+                       "d1 d2 d3 print"
+                       "d0 d0 d-point print";
+  gap: 10px;
+  margin: 10px;
+  font-size: x-large;
+}
+#button-container button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/**/
+/*following only key placement rules*/
+/**/
+#reset{
+  grid-area: reset;
+}
+#backspace{
+  grid-area: backspace;
+}
+#percent{
+  display: none !important;
+  grid-area: percent;
+}
+#divide{
+  grid-area: divide;
+}
+#multiply{
+  grid-area: multiply;
+}
+#subtract{
+  grid-area: subtract;
+}
+#add{
+  grid-area: add;
+}
+#print{
+  grid-area: print;
+}
+#change-sign{
+  display: none !important;
+  grid-area: change-sign;
+}
+#d-point{
+  grid-area: d-point;
+}
+#d0{
+  grid-area: d0;
+ }
+#d1{
+  grid-area: d1;
+ }
+#d2{
+  grid-area: d2;
+ }
+#d3{
+  grid-area: d3;
+ }
+#d4{
+  grid-area: d4;
+ }
+#d5{
+  grid-area: d5;
+ }
+#d6{
+  grid-area: d6;
+ }
+#d7{
+  grid-area: d7;
+ }
+#d8{
+  grid-area: d8;
+ }
+#d9{
+  grid-area: d9;
+ }
+
